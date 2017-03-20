@@ -16,10 +16,12 @@ namespace MvcApplication3.Controllers
         private TodoItemContext db = new TodoItemContext();
 
         // PUT api/Todo/5
-        public HttpResponseMessage PutTodoItem(int id, TodoItemDto todoItemDto)
+        public HttpResponseMessage PutTodoItem(int id, TodoItemDto todoItemDto) 
         {
             if (!ModelState.IsValid)
             {
+                int x = 1;
+                x = x + 1;
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
             }
 
